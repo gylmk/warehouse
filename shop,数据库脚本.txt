@@ -1,0 +1,128 @@
+
+SET FOREIGN_KEY_CHECKS=0;
+ 
+-- ----------------------------
+-- Table structure for hw
+-- ----------------------------
+DROP TABLE IF EXISTS `hw`;
+CREATE TABLE `hw` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `number` int(11) DEFAULT NULL,
+  `money` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `gy` varchar(255) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `sj` int(11) DEFAULT NULL,
+  `sh` int(11) DEFAULT NULL,
+  `zrr` varchar(255) DEFAULT NULL,
+  `t5` varchar(255) DEFAULT NULL,
+  `t6` varchar(255) DEFAULT NULL,
+  `jg` int(11) DEFAULT NULL,
+  `lr` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+ 
+-- ----------------------------
+-- Records of hw
+-- ----------------------------
+INSERT INTO `hw` VALUES ('1', '°ô°ôÌÇ', '38', '20', '12312', '°¢¶û±°Ë¹', '2018-06-14', '1', '1', 'admin', null, null, null, null);
+INSERT INTO `hw` VALUES ('2', 'bbb', '11', '11', '111', '11', '2018-06-12', '0', '1', '°¡°¡°¡', null, null, null, null);
+INSERT INTO `hw` VALUES ('3', 'apple', '9', '100', '110', 'apple', '2018-06-14', '1', '1', 'admin', null, null, null, null);
+INSERT INTO `hw` VALUES ('4', 'test', '12', '12', '123', '12', '2018-06-13', '0', '1', 'admin', null, null, null, null);
+INSERT INTO `hw` VALUES ('5', 'sl', '10', '100', '110', 'sl', '2018-06-14', '1', '1', 'admin', null, null, null, null);
+INSERT INTO `hw` VALUES ('6', 'tesssss', '100', '11', '11', '11', '2018-06-14', '0', '0', '123', null, null, null, null);
+INSERT INTO `hw` VALUES ('7', 'iphone x', '100', '7399', '110', 'apple', '2018-06-14', '0', '0', '123', null, null, null, null);
+ 
+-- ----------------------------
+-- Table structure for sh
+-- ----------------------------
+DROP TABLE IF EXISTS `sh`;
+CREATE TABLE `sh` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hw` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `money` int(11) DEFAULT NULL,
+  `jg` int(11) DEFAULT NULL,
+  `lr` int(11) DEFAULT NULL,
+  `phone` varchar(255) NOT NULL,
+  `sh` int(11) DEFAULT NULL,
+  `date` date NOT NULL,
+  `sl` int(11) DEFAULT NULL,
+  `zrr` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+ 
+-- ----------------------------
+-- Records of sh
+-- ----------------------------
+INSERT INTO `sh` VALUES ('4', 'apple', '1', '100', '120', '11800', '1', '1', '2018-06-13', '1', 'admin');
+INSERT INTO `sh` VALUES ('5', 'sl', '1', '100', '120', '500', '1', '1', '2018-06-13', '1', 'admin');
+INSERT INTO `sh` VALUES ('6', 'sl', '1', '100', '120', '2000', '1', '1', '2018-06-13', '1', 'admin');
+INSERT INTO `sh` VALUES ('7', 'sl', '1', '100', '120', '11800', '1', '1', '2018-06-14', '1', 'admin');
+INSERT INTO `sh` VALUES ('9', 'apple', '1', '100', '120', '100', '1', '1', '2018-06-14', '2', 'admin');
+INSERT INTO `sh` VALUES ('10', 'apple', '1', '100', '120', '160', '17633191723', '1', '2018-06-14', '8', 'admin');
+INSERT INTO `sh` VALUES ('11', '°ô°ôÌÇ', '1', '20', '100', '4000', '1', '1', '2018-06-14', '50', 'admin');
+INSERT INTO `sh` VALUES ('12', '°ô°ôÌÇ', '1', '20', '30', '20', '1', '1', '2018-06-14', '2', 'admin');
+INSERT INTO `sh` VALUES ('14', '°ô°ôÌÇ', '1', '20', '1200', '11800', '1', '1', '2018-06-14', '10', '321');
+ 
+-- ----------------------------
+-- Table structure for test1
+-- ----------------------------
+DROP TABLE IF EXISTS `test1`;
+CREATE TABLE `test1` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `q` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+-- ----------------------------
+-- Records of test1
+-- ----------------------------
+INSERT INTO `test1` VALUES ('1', 'liu', '1');
+ 
+-- ----------------------------
+-- Table structure for test2
+-- ----------------------------
+DROP TABLE IF EXISTS `test2`;
+CREATE TABLE `test2` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `x` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+-- ----------------------------
+-- Records of test2
+-- ----------------------------
+INSERT INTO `test2` VALUES ('1', 'liu', '1');
+ 
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `sex` int(255) DEFAULT NULL,
+  `year` varchar(255) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `t1` int(255) DEFAULT NULL,
+  `t2` int(255) DEFAULT NULL,
+  `t3` varchar(255) DEFAULT NULL,
+  `t4` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+ 
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', 'admin', '123', '0', '12', '2018-06-08', '110', '0', '0', null, null);
+INSERT INTO `user` VALUES ('2', 'zhangsan,ÄÐ', '11111111', '0', '12', '2018-06-13', '111', '0', '0', null, null);
+INSERT INTO `user` VALUES ('3', 'admin,Å®', '11111111', '1', '1', '2018-06-09', '11', '2', '0', null, null);
+INSERT INTO `user` VALUES ('4', 'sss,Å®', '123', '0', '12', '2018-06-12', '111', '0', '0', null, null);
+INSERT INTO `user` VALUES ('5', '123', '12', '0', '1111', '2018-06-12', '111', '3', '0', null, null);
+INSERT INTO `user` VALUES ('9', '321', '12', '0', '22', '2018-06-13', '22', '2', '0', null, null);
