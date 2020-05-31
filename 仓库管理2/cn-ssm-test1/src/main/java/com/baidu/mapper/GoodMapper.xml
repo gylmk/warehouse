@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.baidu.mapper.GoodMapperI">
+	<!--仓库管理列表-->
+	<select id="storeAction_list" resultType="store">
+		select * from store
+	</select>
+	
+	<!--创建新仓库-->
+	<insert id="storeAction_add" parameterType="store">
+		insert into store(id,name,address,manager) values(#{id},#{name},#{address},#{manager})
+	</insert>
+	
+	<!--修改回显仓库-->
+	<select id="toedit" parameterType="string" resultType="store">
+		select * from store where id = #{id}
+	</select>
+  	
+  	<!--修改仓库-->
+  	<update id="storeupdate" parameterType="store">
+  		update store set name=#{name},address=#{address},manager=#{manager} where id=#{id}
+  	</update>
+  	
+  	<!--删除仓库-->
+  	<delete id="stroedelete" parameterType="string">
+  		delete from store where id=#{id}
+  	</delete>
+  	
+  	<!--查询商品库存-->
+  	<select id="goodsAction_searchUI" resultType="goods" parameterType="map">
+  		SELECT g.nm,g.goodname,g.unit,g.amount,s.`name` FROM goods g
+		LEFT JOIN store s
+		ON g.storeid = s.id
+		WHERE g.goodname LIKE concat('%',#{goodname},'%')
+		AND g.nm LIKE concat('%',#{nm},'%') 
+		AND g.storeid LIKE concat('%',#{storeid},'%')  
+  	</select>
+  	
+  	<!--验证商品简拼是否存在|并且获取数据对象-->
+  	<select id="checkByStoreNm" parameterType="string" resultType="goods">
+		SELECT g.id ids,g.storeid,s.id,g.nm,g.goodname,g.unit,s.`name` FROM goods g 
+		LEFT JOIN store s
+		ON g.storeid = s.id    
+		WHERE  g.nm = #{nm}  		
+  	</select>
+  	
+  	<!--查询商品数量-->
+  	<select id="getAmounts" parameterType="string" resultType="double">
+  		SELECT SUM(amount) FROM goods WHERE id = #{ids}	
+  	</select>
+  	
+  	<!--修改入库-->
+  	<update id="updategood" parameterType="map">
+  		update goods set amount=#{amount2} where id=#{ids}
+  	</update>
+  	
+  	<!--添加商品-->
+  	<insert id="addgood" parameterType="goods">
+  		insert into goods(id,amount,goodname,nm,unit,storeid) values(#{id},#{amount},#{goodname},#{nm},#{unit},#{storeid})  
+  	</insert>
+  	
+  	<!--出库查询(模糊查询一)-->
+  	<select id="goodsAction_findLinkByName" parameterType="string" resultType="string">
+  		select g.goodname from goods g where g.goodname like concat('%',#{name},'%')
+  	</select>
+  	
+  	<!--出库查询(模糊查询二)-->
+  	<select id="goodsAction_findGoodsByName" parameterType="string" resultType="goods">
+  		select g.*,s.name storename from goods g 
+  		left join store s on 
+  		g.storeid=s.id
+  		where g.goodname=#{name}
+  	</select>
+  	
+  	<!--删除商品-->
+  	<delete id="deleteGood" parameterType="string">
+  		delete from goods where id=#{id}
+  	</delete>
+  	
+  	<!--修改商品-->
+  	<update id="updateGood" parameterType="map">
+  		update goods set amount=#{num} where id=#{id}
+  	</update>
+  </mapper>

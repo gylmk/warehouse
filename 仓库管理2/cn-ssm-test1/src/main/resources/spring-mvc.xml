@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd 
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd ">
+
+	<!-- 第一项：配置注解扫描 -->
+	<context:component-scan base-package="com.baidu.controller" />
+	
+	<!-- 第二项：扫描组件 -->
+	<mvc:annotation-driven />
+	
+	<!-- 第三项：上传下载  -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8"></property>
+		<property name="maxUploadSize" value="10485760000"></property>
+		<property name="maxInMemorySize" value="40960"></property>
+	</bean>
+	
+	<!-- 第四项：配置拦截器 -->
+	<!-- <mvc:interceptors>
+   		配置登陆拦截
+   		<mvc:interceptor>
+   			表示拦截所有的url包括子url路径
+   			<mvc:mapping path="/**"/> 
+   			指定的拦截器类配置
+   			<bean class="com.baidu.interceptor.LoginInterceptor"/>
+   		</mvc:interceptor>
+   
+   		拦截器一
+   		<mvc:interceptor>
+   			表示拦截所有的url包括子url路径
+   			<mvc:mapping path="/**"/> 
+   			指定的拦截器类配置
+   			<bean class="com.baidu.interceptor.HandlerInterceptor1"/>
+   		</mvc:interceptor>
+   		
+   		 拦截器二
+   		<mvc:interceptor>
+   			表示拦截所有的url包括子url路径
+   			<mvc:mapping path="/**"/> 
+   			指定的拦截器类配置
+   			<bean class="com.baidu.interceptor.HandlerInterceptor2"/>
+   		</mvc:interceptor>
+   		
+   		拦截器三
+   		<mvc:interceptor>
+   			表示拦截所有的url包括子url路径
+   			<mvc:mapping path="/**"/> 
+   			指定的拦截器类配置
+   			<bean class="com.baidu.interceptor.HandlerInterceptor3"/>
+   		</mvc:interceptor>
+   </mvc:interceptors> -->
+	
+	<!-- 第五项：配置视图解析器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+</beans>

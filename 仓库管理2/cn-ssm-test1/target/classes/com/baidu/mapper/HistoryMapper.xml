@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.baidu.mapper.HistoryMapperI">
+  	<!--入库历史记录-->
+	<!--添加历史记录-->
+	<insert id="insertHistory" parameterType="history">
+		insert into history values (#{id},#{amounts},now(),#{remain},'入库',#{user},#{historyid})
+	</insert>
+	
+	<!--出库历史记录-->
+  	<!--添加历史记录-->
+	<insert id="updateHistory" parameterType="history">
+		insert into history values (#{id},#{amounts},now(),#{remain},'出库',#{user},#{historyid})
+	</insert>
+	
+	<!--删除历史记录-->
+	<delete id="deleteHistory" parameterType="string">
+		delete from history where historyid=#{historyid}
+	</delete>
+	
+	<!--查询历史记录列表-->
+  	<select id="listhistory" resultType="history">
+  		select  g.nm,g.goodname,h.datetime,h.type,g.unit,h.amount amounts,h.remain,s.name
+		from history h left join goods g 
+		on h.historyid=g.id left join store s
+		on g.storeid=s.id
+		order by h.datetime desc
+  	</select>
+  </mapper>

@@ -1,0 +1,14 @@
+com\baidu\entity\History.class
+com\baidu\mapper\HistoryMapperI.class
+com\baidu\controller\UserController.class
+com\baidu\mapper\GoodMapperI.class
+com\baidu\service\GoodServiceI.class
+com\baidu\entity\User.class
+com\baidu\service\UserServiceI.class
+com\baidu\service\UserServiceImpl.class
+com\baidu\entity\Goods.class
+com\baidu\controller\GoodController.class
+com\baidu\mapper\UserMapperI.class
+com\baidu\utils\MD5Utils.class
+com\baidu\entity\Store.class
+com\baidu\service\GoodServiceImpl.class

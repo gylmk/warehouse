@@ -1,0 +1,96 @@
+.tx {
+	BORDER-RIGHT: #006600 1px solid; BORDER-TOP: #006600 1px solid; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(/yuntong/picture/bj1.gif); BORDER-LEFT: #006600 1px solid; COLOR: #006600; BORDER-BOTTOM: #006600 1px solid; FONT-FAMILY: "����"
+}
+.txt1 {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND-IMAGE: url(/yuntong/picture/bj1.gif); BORDER-BOTTOM-WIDTH: 0px; FONT: 9pt "����"; COLOR: #000000; BORDER-RIGHT-WIDTH: 0px; TEXT-DECORATION: none
+}
+.sec1 {
+	BORDER-RIGHT: gray 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; COLOR: #000000; BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND-COLOR: #c0c0ff
+}
+.sec2 {
+	BORDER-RIGHT: gray 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-WEIGHT: bold; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; COLOR: #c060ff; BACKGROUND-COLOR: #ffffff
+}
+.main_tab {
+	BORDER-RIGHT: gray 1px solid; BORDER-LEFT: #ffffff 1px solid; COLOR: #000000; BORDER-BOTTOM: gray 1px solid; BACKGROUND-COLOR:#ffffff
+}
+BODY {
+	
+}
+TD {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: "����", "system"; TEXT-DECORATION: none
+}
+.t {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 20px; FONT-FAMILY: "����", "system"; TEXT-DECORATION: none
+}
+.w {
+	FONT-SIZE: 9pt; COLOR: #fffaed; LINE-HEIGHT: 15px; FONT-FAMILY: "����", "system"; TEXT-DECORATION: none
+}
+.style1 {
+	COLOR: #ff3300
+}
+.en1 {
+	FONT-SIZE: 8pt; FONT-FAMILY: "verdana", "arial", "helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #0066cc; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #cc0000; TEXT-DECORATION: underline
+}
+A.mnu {
+	COLOR: #fffaed; TEXT-DECORATION: none
+}
+A.mnu:visited {
+	COLOR: #fffaed; TEXT-DECORATION: none
+}
+A.mnu:link {
+	COLOR: #fffaed; TEXT-DECORATION: none
+}
+A.mnu:active {
+	COLOR: #fffaed; TEXT-DECORATION: none
+}
+A.mnu:hover {
+	COLOR: #fffaed; TEXT-DECORATION: underline
+}
+.en {
+	FONT-SIZE: 9pt; FONT-FAMILY: "verdana", "arial", "helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.go {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: "verdana", "arial", "helvetica", "sans-serif"; HEIGHT: 16px
+}
+.text {
+	LINE-HEIGHT: 18px
+}
+.menubar {
+	
+}
+.main {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 10pt; BORDER-LEFT: 0px; LINE-HEIGHT: 20px; BORDER-BOTTOM: 0px; FONT-FAMILY: "����"
+}
+.input {
+	WIDTH: 150px; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+.del {
+	TEXT-DECORATION: line-through
+}
+.style8 {
+	COLOR: #ffffff
+}
+.enCopy {
+	FONT-SIZE: 8pt; FONT-FAMILY: "verdana", "arial", "helvetica", "sans-serif"; TEXT-DECORATION: none
+}
+.tdrightline {
+	BORDER-TOP-WIDTH: 1px; BORDER-RIGHT: #eaeaea 1px solid; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: #eaeaea; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #eaeaea; BORDER-TOP-COLOR: #eaeaea
+}
+.2006input {
+	BORDER-RIGHT: #d1d1d1 1px solid; BORDER-TOP: #d1d1d1 1px solid; BORDER-LEFT: #d1d1d1 1px solid; BORDER-BOTTOM: #d1d1d1 1px solid; BACKGROUND-COLOR: #ffffff
+}
