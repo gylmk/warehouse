@@ -12,7 +12,7 @@
 	<!-- 已经依据maven仓库给出的版本兼容信息，调节好合适的spring、mybatis-spring、mybatis、pagehelper版本号 -->
 	<properties>
 		<junit.version>4.12</junit.version>
-		<spring.version>4.3.10.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 		<mybatis.version>3.4.1</mybatis.version>
 		<mybatis.spring.version>1.3.0</mybatis.spring.version>
 		<mysql.version>5.1.32</mysql.version>
