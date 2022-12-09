@@ -158,7 +158,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>3.2.18.RELEASE</version>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
